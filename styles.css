@@ -1,0 +1,65 @@
+/* Styles for the entire website */
+
+/* Body: Set font family and font size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+/* Header: Background color */
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Nav: Background color */
+nav {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Main: Background color and font size */
+main {
+  background-color: #ffffff;
+  font-size: 18px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer: Background color */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* List items: Display and width */
+li {
+  display: inline-block;
+  width: 100px;
+  margin: 5px;
+  text-align: center;
+}
+
+/* h1: Text alignment, font family, and color */
+h1 {
+  text-align: center;
+  font-family: "Georgia", serif;
+  color: #4caf50;
+}
+
+/* p: Line height */
+p {
+  line-height: 1.6;
+  color: #333;
+}
