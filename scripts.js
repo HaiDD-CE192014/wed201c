@@ -1,30 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Page loaded. Initializing gallery...");
 
-  // Select all figures
-  const figures = document.querySelectorAll("figure");
+  // Select the preview element
+  const preview = document.getElementById("image");
 
-  // Add tabindex and event listeners
-  figures.forEach((figure, index) => {
-    figure.setAttribute("tabindex", "0"); // Make figure focusable
+  // Select all images within the gallery
+  const images = document.querySelectorAll("#gallery img");
 
-    // onmouseover and onmouseleave
-    figure.addEventListener("mouseover", () => {
-      figure.style.transform = "scale(1.1)";
-    });
-    figure.addEventListener("mouseleave", () => {
-      figure.style.transform = "scale(1)";
-    });
+  // Define the upDate function to handle mouseover events
+  function upDate(previewPic) {
+    console.log("Mouse over image:", previewPic.alt, previewPic.src);
 
-    // onfocus and onblur
-    figure.addEventListener("focus", () => {
-      figure.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.3)";
-    });
-    figure.addEventListener("blur", () => {
-      figure.style.boxShadow = "none";
-    });
+    // Update the preview text with the alt text of the hovered image
+    preview.textContent = previewPic.alt;
 
-    // Log events for debugging
-    console.log(`Tabindex added to figure ${index + 1}`);
+    // Update the background image of the preview div
+    preview.style.backgroundImage = `url('${previewPic.src}')`;
+    preview.style.backgroundSize = "cover";
+    preview.style.backgroundPosition = "center";
+  }
+
+  // Define the undo function to handle mouseleave events
+  function undo() {
+    console.log("Mouse left the image");
+
+    // Reset the preview text to the default message
+    preview.textContent = "Hover over an image below to display here.";
+
+    // Reset the background image of the preview div
+    preview.style.backgroundImage = "none";
+  }
+
+  // Add event listeners to each image in the gallery
+  images.forEach((img) => {
+    // Bind the upDate function to the mouseover event
+    img.addEventListener("mouseover", () => upDate(img));
+
+    // Bind the undo function to the mouseleave event
+    img.addEventListener("mouseleave", undo);
   });
+
+  console.log("Gallery initialized successfully.");
 });
