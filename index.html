@@ -3,31 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Photo Gallery</title>
+    <title>Accessible Photo Gallery</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="image">Hover over an image below to display here.</div>
-    <div class="gallery">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1024px-Flag_of_Vietnam.svg.png"
-        alt="Description of Image 1"
-        onmouseover="upDate(this)"
-        onmouseout="undo()"
-      />
-      <img
-        src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1024px-Flag_of_Japan.svg.png"
-        alt="Description of Image 2"
-        onmouseover="upDate(this)"
-        onmouseout="undo()"
-      />
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1024px-Flag_of_South_Korea.svg.png"
-        alt="Description of Image 3"
-        onmouseover="upDate(this)"
-        onmouseout="undo()"
-      />
-    </div>
+    <header>
+      <h1>Interactive Photo Gallery</h1>
+    </header>
+    <main>
+      <div id="gallery">
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1024px-Flag_of_Vietnam.svg.png"
+            alt="Description of image 1"
+          />
+          <figcaption>Caption for image 1</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1024px-Flag_of_South_Korea.svg.png"
+            alt="Description of image 2"
+          />
+          <figcaption>Caption for image 2</figcaption>
+        </figure>
+      </div>
+    </main>
     <script src="scripts.js"></script>
   </body>
 </html>

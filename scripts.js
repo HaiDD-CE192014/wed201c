@@ -1,19 +1,30 @@
-function upDate(previewPic) {
-  // Log details for debugging
-  console.log("Mouse over image:", previewPic.src, previewPic.alt);
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Page loaded. Initializing gallery...");
 
-  // Update background image and text
-  const imageDiv = document.getElementById("image");
-  imageDiv.style.backgroundImage = `url('${previewPic.src}')`;
-  imageDiv.textContent = previewPic.alt;
-}
+  // Select all figures
+  const figures = document.querySelectorAll("figure");
 
-function undo() {
-  // Log for debugging
-  console.log("Mouse left image");
+  // Add tabindex and event listeners
+  figures.forEach((figure, index) => {
+    figure.setAttribute("tabindex", "0"); // Make figure focusable
 
-  // Reset background image and text
-  const imageDiv = document.getElementById("image");
-  imageDiv.style.backgroundImage = "";
-  imageDiv.textContent = "Hover over an image below to display here.";
-}
+    // onmouseover and onmouseleave
+    figure.addEventListener("mouseover", () => {
+      figure.style.transform = "scale(1.1)";
+    });
+    figure.addEventListener("mouseleave", () => {
+      figure.style.transform = "scale(1)";
+    });
+
+    // onfocus and onblur
+    figure.addEventListener("focus", () => {
+      figure.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.3)";
+    });
+    figure.addEventListener("blur", () => {
+      figure.style.boxShadow = "none";
+    });
+
+    // Log events for debugging
+    console.log(`Tabindex added to figure ${index + 1}`);
+  });
+});
