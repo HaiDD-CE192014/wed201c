@@ -3,28 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 2</title>
+    <meta
+      name="description"
+      content="Accessible website project with navigation and grid/flex layout"
+    />
+    <title>Accessible Website</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-    <nav>
+    <nav class="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
     <main id="main-content">
-      <h1>Welcome to Homework 2</h1>
-      <div class="grid"></div>
-      <div class="flex">
-        <div>Flex Item 1</div>
-        <div>Flex Item 2</div>
-        <div>Flex Item 3</div>
-      </div>
+      <header>
+        <h1>Welcome to the Accessible Website</h1>
+      </header>
+
+      <section class="grid-section">
+        <h2>Featured Content</h2>
+        <div class="grid-container">
+          <div class="grid-item">Item 1</div>
+          <div class="grid-item">Item 2</div>
+          <div class="grid-item">Item 3</div>
+          <div class="grid-item">Item 4</div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Accessible Website. All rights reserved.</p>
+      </footer>
     </main>
   </body>
 </html>
