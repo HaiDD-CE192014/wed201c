@@ -3,42 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Accessible website project with navigation and grid/flex layout"
-    />
-    <title>Accessible Website</title>
+    <title>Interactive Photo Gallery</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to Main Content</a>
-
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-
-    <main id="main-content">
-      <header>
-        <h1>Welcome to the Accessible Website</h1>
-      </header>
-
-      <section class="grid-section">
-        <h2>Featured Content</h2>
-        <div class="grid-container">
-          <div class="grid-item">Item 1</div>
-          <div class="grid-item">Item 2</div>
-          <div class="grid-item">Item 3</div>
-          <div class="grid-item">Item 4</div>
-        </div>
-      </section>
-
-      <footer>
-        <p>&copy; 2025 Accessible Website. All rights reserved.</p>
-      </footer>
-    </main>
+    <div id="image">Hover over an image below to display here.</div>
+    <div class="gallery">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1024px-Flag_of_Vietnam.svg.png"
+        alt="Description of Image 1"
+        onmouseover="upDate(this)"
+        onmouseout="undo()"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1024px-Flag_of_Japan.svg.png"
+        alt="Description of Image 2"
+        onmouseover="upDate(this)"
+        onmouseout="undo()"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/1024px-Flag_of_South_Korea.svg.png"
+        alt="Description of Image 3"
+        onmouseover="upDate(this)"
+        onmouseout="undo()"
+      />
+    </div>
+    <script src="scripts.js"></script>
   </body>
 </html>
