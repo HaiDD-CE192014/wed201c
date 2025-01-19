@@ -5,58 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accessible Interactive Photo Gallery</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <h1>Accessible Interactive Photo Gallery</h1>
+      <p>
+        Explore flags of the world by hovering or navigating with your keyboard.
+      </p>
     </header>
     <main>
-      <div id="image">Hover over an image below to display here.</div>
+      <div id="image" aria-live="polite">
+        Hover over an image below to display here.
+      </div>
       <div id="gallery">
-        <figure tabindex="0">
+        <figure tabindex="0" aria-labelledby="vietnam-caption">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg"
             alt="Flag of Vietnam"
           />
-          <figcaption>Vietnam</figcaption>
+          <figcaption id="vietnam-caption">Vietnam</figcaption>
         </figure>
-        <figure tabindex="0">
+        <figure tabindex="0" aria-labelledby="south-korea-caption">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg"
             alt="Flag of South Korea"
           />
-          <figcaption>South Korea</figcaption>
+          <figcaption id="south-korea-caption">South Korea</figcaption>
         </figure>
-        <figure tabindex="0">
+        <figure tabindex="0" aria-labelledby="japan-caption">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg"
             alt="Flag of Japan"
           />
-          <figcaption>Japan</figcaption>
+          <figcaption id="japan-caption">Japan</figcaption>
         </figure>
-        <figure tabindex="0">
+        <figure tabindex="0" aria-labelledby="germany-caption">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg"
             alt="Flag of Germany"
           />
-          <figcaption>Germany</figcaption>
+          <figcaption id="germany-caption">Germany</figcaption>
         </figure>
-        <figure tabindex="0">
+        <figure tabindex="0" aria-labelledby="usa-caption">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
             alt="Flag of the United States"
           />
-          <figcaption>United States</figcaption>
+          <figcaption id="usa-caption">United States</figcaption>
         </figure>
-        <figure tabindex="0">
+        <figure tabindex="0" aria-labelledby="brazil-caption">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
             alt="Flag of Brazil"
           />
-          <figcaption>Brazil</figcaption>
+          <figcaption id="brazil-caption">Brazil</figcaption>
         </figure>
       </div>
     </main>
+    <footer>
+      <p>© 2025 Interactive Photo Gallery. All rights reserved.</p>
+    </footer>
     <script src="scripts.js"></script>
   </body>
 </html>
